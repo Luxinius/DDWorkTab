@@ -16,17 +16,17 @@ namespace DD_WorkTab.Tools
 	[StaticConstructorOnStartup]
 	public static class Utilities
 	{
-		public const float DraggableDiameter = 48f;
+		public const float DraggableDiameter = 36.5f;
 
-		public const float SmallDraggableDiameter = 32f;
+		public const float SmallDraggableDiameter = 36f;
 
-		public const float PassionDrawSize = 14f;
+		public const float PassionDrawSize = 10f;
 
-		public const float ShortSpacing = 8f;
+		public const float ShortSpacing = 2f;
 
-		public const float SpaceForPawnLabel = 140f;
+		public const float SpaceForPawnLabel = 120f;
 
-		public const float SpaceForScrollBar = 22f;
+		public const float SpaceForScrollBar = 10f;
 
 		public const float SpaceForWorkButton = 2f * ShortSpacing + DraggableDiameter;
 
@@ -76,13 +76,13 @@ namespace DD_WorkTab.Tools
 
 		public static readonly SoundDef TaskFailed = SoundDefOf.ClickReject;
 
-		public static readonly SoundDef WorkEnabled = SoundDefOf.LessonActivated;
+		public static readonly SoundDef WorkEnabled = SoundDefOf.Lesson_Activated;
 
-		public static readonly SoundDef WorkDisabled = SoundDefOf.LessonDeactivated;
+		public static readonly SoundDef WorkDisabled = SoundDefOf.Lesson_Deactivated;
 
-		public static readonly SoundDef SortedSkills = SoundDefOf.TickHigh;
+		public static readonly SoundDef SortedSkills = SoundDefOf.Tick_High;
 
-		public static readonly SoundDef UnsortedSkills = SoundDefOf.TickLow;
+		public static readonly SoundDef UnsortedSkills = SoundDefOf.Tick_Low;
 
 		public static readonly SoundDef CompareSkillsMapChanged = SoundDefOf.DialogBoxAppear;
 
@@ -92,9 +92,9 @@ namespace DD_WorkTab.Tools
 		//DingoUtils.CachedStrings[WorkTypeDef] => relevant skills for def
 		//DingoUtils.CachedStrings[Pawn] => pawn label
 
-		public static float MaxWindowWidth => UI.screenWidth * 0.8f;
+		public static float MaxWindowWidth => UI.screenWidth * 1f;
 
-		public static float MaxWindowHeight => UI.screenHeight * 0.8f;
+		public static float MaxWindowHeight => UI.screenHeight * 1f;
 
 		static Utilities()
 		{
@@ -461,7 +461,7 @@ namespace DD_WorkTab.Tools
 					title = "DD_WorkTab_Title_AllPawns_EnableWork".CachedTranslation();
 					buttonAction = delegate
 					{
-						foreach (Pawn p in Find.VisibleMap.mapPawns.FreeColonists)
+						foreach (Pawn p in Find.CurrentMap.mapPawns.FreeColonists)
 						{
 							Controller.GetManager.GetPawnSurface(p).EnableAllPawnWork();
 						}
@@ -471,7 +471,7 @@ namespace DD_WorkTab.Tools
 					title = "DD_WorkTab_Title_AllPawns_DisableWork".CachedTranslation();
 					buttonAction = delegate
 					{
-						foreach (Pawn p in Find.VisibleMap.mapPawns.FreeColonists)
+						foreach (Pawn p in Find.CurrentMap.mapPawns.FreeColonists)
 						{
 							Controller.GetManager.GetPawnSurface(p).DisableAllPawnWork();
 						}
@@ -481,7 +481,7 @@ namespace DD_WorkTab.Tools
 					title = "DD_WorkTab_Title_AllPawns_ResetWork".CachedTranslation();
 					buttonAction = delegate
 					{
-						foreach (Pawn p in Find.VisibleMap.mapPawns.FreeColonists)
+						foreach (Pawn p in Find.CurrentMap.mapPawns.FreeColonists)
 						{
 							Controller.GetManager.GetPawnSurface(p).ResetAllPawnWork();
 						}

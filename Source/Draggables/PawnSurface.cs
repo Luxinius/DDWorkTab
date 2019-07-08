@@ -302,7 +302,7 @@ namespace DD_WorkTab.Draggables
 
 			this.ConformWorkToList(referencedSurface.children);
 
-			string pastedPriorities = "DD_WorkTab_Message_PastedPriorities".CachedTranslation(new string[] { referencedSurface.pawn.NameStringShort }).AdjustedFor(this.pawn);
+			string pastedPriorities = "DD_WorkTab_Message_PastedPriorities".CachedTranslation(new string[] { referencedSurface.pawn.LabelShort }).AdjustedFor(this.pawn);
 
 			Utilities.UserFeedbackChain(WorkSound.TaskCompleted, pastedPriorities);
 		}

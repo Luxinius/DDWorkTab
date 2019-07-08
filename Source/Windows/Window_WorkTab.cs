@@ -17,12 +17,12 @@ namespace DD_WorkTab.Windows
 
 		protected override int GetColonistCount()
 		{
-			return Find.VisibleMap.mapPawns.FreeColonistsCount;
+			return Find.CurrentMap.mapPawns.FreeColonistsCount;
 		}
 
 		protected override IEnumerable<PawnSurface> GetCachedSurfaces()
 		{
-			foreach (Pawn pawn in Find.VisibleMap.mapPawns.FreeColonists.OrderBy(p => p.CachedPawnLabel()))
+			foreach (Pawn pawn in Find.CurrentMap.mapPawns.FreeColonists.OrderBy(p => p.CachedPawnLabel()))
 			{
 				yield return Controller.GetManager.GetPawnSurface(pawn);
 			}

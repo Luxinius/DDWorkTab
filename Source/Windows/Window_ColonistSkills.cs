@@ -29,7 +29,7 @@ namespace DD_WorkTab.Windows
 		{
 			if (Controller.ColonistSkillsVisibleMap)
 			{
-				return Find.VisibleMap.mapPawns.FreeColonistsCount;
+				return Find.CurrentMap.mapPawns.FreeColonistsCount;
 			}
 
 			else
@@ -40,7 +40,7 @@ namespace DD_WorkTab.Windows
 
 		protected override IEnumerable<PawnSurface> GetCachedSurfaces()
 		{
-			IEnumerable<Pawn> pawnsList = Controller.ColonistSkillsVisibleMap ? Find.VisibleMap.mapPawns.FreeColonists : PawnsFinder.AllMaps_FreeColonists;
+			IEnumerable<Pawn> pawnsList = Controller.ColonistSkillsVisibleMap ? Find.CurrentMap.mapPawns.FreeColonists : PawnsFinder.AllMaps_FreeColonists;
 
 			if (this.sortingOrder == SortOrder.Undefined || this.sortingDef == null)
 			{

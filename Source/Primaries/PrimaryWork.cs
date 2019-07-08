@@ -18,7 +18,7 @@ namespace DD_WorkTab.Primaries
 
 		private void OnShiftClick(int clickInt)
 		{
-			foreach (Pawn pawn in Find.VisibleMap.mapPawns.FreeColonists)
+			foreach (Pawn pawn in Find.CurrentMap.mapPawns.FreeColonists)
 			{
 				Controller.GetManager.GetPawnSurface(pawn).OnPrimaryShiftClick(clickInt, this.def);
 			}
@@ -32,7 +32,7 @@ namespace DD_WorkTab.Primaries
 		{
 			this.ctrlState = !this.ctrlState;
 
-			foreach (Pawn pawn in Find.VisibleMap.mapPawns.FreeColonists)
+			foreach (Pawn pawn in Find.CurrentMap.mapPawns.FreeColonists)
 			{
 				Controller.GetManager.GetPawnSurface(pawn).OnPrimaryCtrlClick(this.ctrlState, this.def);
 			}

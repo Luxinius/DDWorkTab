@@ -1,0 +1,6 @@
+D:\Steam\steamapps\common\RimWorld\Mods\DD WorkTab\Source\obj\Debug\DD_WorkTab.csprojAssemblyReference.cache
+D:\Steam\steamapps\common\RimWorld\Mods\DD WorkTab\Source\obj\Debug\DD_WorkTab.csproj.CoreCompileInputs.cache
+C:\Users\lukaj\Desktop\video\DD_WorkTab.dll
+D:\Steam\steamapps\common\RimWorld\Mods\DD WorkTab\Source\obj\Debug\DD_WorkTab.csproj.CopyComplete
+D:\Steam\steamapps\common\RimWorld\Mods\DD WorkTab\Source\obj\Debug\DD_WorkTab.dll
+D:\Steam\steamapps\common\RimWorld\Mods\DD WorkTab\Assemblies\DD_WorkTab.dll
